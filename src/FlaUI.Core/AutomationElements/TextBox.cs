@@ -82,6 +82,13 @@ namespace FlaUI.Core.AutomationElements
         public void Enter(string value)
         {
             Focus();
+
+            //empty content first
+            using (Keyboard.Pressing(VirtualKeyShort.CONTROL))
+            {
+                Keyboard.Press(VirtualKeyShort.KEY_A);
+            }
+
             var valuePattern = Patterns.Value.PatternOrDefault;
             valuePattern?.SetValue(String.Empty);
             if (String.IsNullOrEmpty(value)) return;
