@@ -3,31 +3,31 @@ using System.Runtime.Serialization;
 
 namespace FlaUI.Core.Exceptions
 {
-    [Serializable]
-    public class MethodNotSupportedException : FlaUIException
-    {
-        public MethodNotSupportedException()
-        {
-        }
+	[Serializable]
+	public class MethodNotSupportedException : FlaUIException
+	{
+		public MethodNotSupportedException()
+		{
+		}
 
-        public MethodNotSupportedException(string message)
-            : base(message)
-        {
-        }
+		public MethodNotSupportedException(string message)
+			: base(message)
+		{
+		}
 
-        public MethodNotSupportedException(Exception innerException)
-            : base(String.Empty, innerException)
-        {
-        }
+		public MethodNotSupportedException(Exception innerException)
+			: base(String.Empty, innerException)
+		{
+		}
 
-        public MethodNotSupportedException(string message, Exception innerException)
-            : base(message, innerException)
-        {
-        }
+		public MethodNotSupportedException(string message, Exception innerException)
+			: base(message, innerException)
+		{
+		}
 
-        protected MethodNotSupportedException(SerializationInfo info, StreamingContext context)
-            : base(info, context)
-        {
-        }
-    }
+		protected MethodNotSupportedException(SerializationInfo info, StreamingContext context)
+			: base(info, context)
+		{
+		}
+	}
 }

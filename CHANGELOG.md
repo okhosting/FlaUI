@@ -62,15 +62,15 @@ The main feature is the .NET Core/.NET Standard compatibility for FlaUI.Core and
   * The `Find...` methods not do not use Retry anymore, the developer himself needs to decide if he wants to use a retry or not.
   * Moved DrawHighlight to extension methods so that they are fluent and can be made null-safe.
   * Reworked Retry
-    * New flag: throwOnTimeout - Defines if Retry should throw when the timeout is reached.
-    * New flag: ignoreException - Defines if Retry should continue in case of an exception.
-    * New flag: lastValueOnTimeout - Defines if Retry should return the last successful value when it gets to a timeout.
-    * New flag: defaultOnTimeout - Defines if Retry should return the default value on a timeout.
-    * New Property: timeoutMessage - Allows adding a custom message when a timeout occurs when retrying.
-    * Renamed Retry.While to Retry.WhileTrue
-    * Added new Retry methods: WhileNull, WhileNotNull, WhileEmpty, Retry.WhileFalse
-    * Added a `RetryResult` object that is returned on the `Retry` methods which contains information about the execution of the current `Retry`
-    * Added tests
+	* New flag: throwOnTimeout - Defines if Retry should throw when the timeout is reached.
+	* New flag: ignoreException - Defines if Retry should continue in case of an exception.
+	* New flag: lastValueOnTimeout - Defines if Retry should return the last successful value when it gets to a timeout.
+	* New flag: defaultOnTimeout - Defines if Retry should return the default value on a timeout.
+	* New Property: timeoutMessage - Allows adding a custom message when a timeout occurs when retrying.
+	* Renamed Retry.While to Retry.WhileTrue
+	* Added new Retry methods: WhileNull, WhileNotNull, WhileEmpty, Retry.WhileFalse
+	* Added a `RetryResult` object that is returned on the `Retry` methods which contains information about the execution of the current `Retry`
+	* Added tests
   * Moved AutomationElement one up in the namespace tree
   * Made the `As` methods extension methods again
   * Removed custom Point/Rectangle and use the one from System.Drawing
@@ -86,15 +86,15 @@ The main feature is the .NET Core/.NET Standard compatibility for FlaUI.Core and
   * Updated the interop dlls
   * Added missing features from .NET 4.7.1 in UIA2
   * Added missing features from newer interop in UIA3
-    * Transaction- and ConnectionTimeout
-    * Selection2 pattern
-    * New text attributes
-    * New automation properties (CenterPoint, FillColor, ... see f2b444ef7d422344b63a187151112b77ca3299f5 for more)
-    * FindWithOptions
-    * New events
-    * UIA3TextRange3
-    * ConnectionRecoveryBehaviorOptions and CoalesceEventsOptions
-    * MatchSubstring for property searching
+	* Transaction- and ConnectionTimeout
+	* Selection2 pattern
+	* New text attributes
+	* New automation properties (CenterPoint, FillColor, ... see f2b444ef7d422344b63a187151112b77ca3299f5 for more)
+	* FindWithOptions
+	* New events
+	* UIA3TextRange3
+	* ConnectionRecoveryBehaviorOptions and CoalesceEventsOptions
+	* MatchSubstring for property searching
   * Code cleanups
   * Added generic `AsType`
   * Use `UtcNow` instead of `Now` for `Retry`

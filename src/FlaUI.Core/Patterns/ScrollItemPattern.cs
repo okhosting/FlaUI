@@ -2,8 +2,8 @@
 
 namespace FlaUI.Core.Patterns
 {
-    public interface IScrollItemPattern : IPattern
-    {
-        void ScrollIntoView();
-    }
+	public interface IScrollItemPattern : IPattern
+	{
+		void ScrollIntoView();
+	}
 }

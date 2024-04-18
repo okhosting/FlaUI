@@ -2,8 +2,8 @@
 
 namespace FlaUI.Core.Patterns
 {
-    public interface IObjectModelPattern : IPattern
-    {
-        object GetUnderlyingObjectModel();
-    }
+	public interface IObjectModelPattern : IPattern
+	{
+		object GetUnderlyingObjectModel();
+	}
 }

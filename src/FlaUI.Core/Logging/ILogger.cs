@@ -2,39 +2,39 @@
 
 namespace FlaUI.Core.Logging
 {
-    public interface ILogger
-    {
-        bool IsTraceEnabled { get; set; }
-        bool IsDebugEnabled { get; set; }
-        bool IsInfoEnabled { get; set; }
-        bool IsWarnEnabled { get; set; }
-        bool IsErrorEnabled { get; set; }
-        bool IsFatalEnabled { get; set; }
+	public interface ILogger
+	{
+		bool IsTraceEnabled { get; set; }
+		bool IsDebugEnabled { get; set; }
+		bool IsInfoEnabled { get; set; }
+		bool IsWarnEnabled { get; set; }
+		bool IsErrorEnabled { get; set; }
+		bool IsFatalEnabled { get; set; }
 
-        /// <summary>
-        /// Sets up to which level the logger should log messages.
-        /// </summary>
-        void SetLevel(LogLevel level);
+		/// <summary>
+		/// Sets up to which level the logger should log messages.
+		/// </summary>
+		void SetLevel(LogLevel level);
 
-        void Log(LogLevel logLevel, string message, params object[] args);
-        void Log(LogLevel logLevel, string message, Exception exception, params object[] args);
+		void Log(LogLevel logLevel, string message, params object[] args);
+		void Log(LogLevel logLevel, string message, Exception exception, params object[] args);
 
-        void Trace(string message, params object[] args);
-        void Trace(string message, Exception exception, params object[] args);
+		void Trace(string message, params object[] args);
+		void Trace(string message, Exception exception, params object[] args);
 
-        void Debug(string message, params object[] args);
-        void Debug(string message, Exception exception, params object[] args);
+		void Debug(string message, params object[] args);
+		void Debug(string message, Exception exception, params object[] args);
 
-        void Info(string message, params object[] args);
-        void Info(string message, Exception exception, params object[] args);
+		void Info(string message, params object[] args);
+		void Info(string message, Exception exception, params object[] args);
 
-        void Warn(string message, params object[] args);
-        void Warn(string message, Exception exception, params object[] args);
+		void Warn(string message, params object[] args);
+		void Warn(string message, Exception exception, params object[] args);
 
-        void Error(string message, params object[] args);
-        void Error(string message, Exception exception, params object[] args);
+		void Error(string message, params object[] args);
+		void Error(string message, Exception exception, params object[] args);
 
-        void Fatal(string message, params object[] args);
-        void Fatal(string message, Exception exception, params object[] args);
-    }
+		void Fatal(string message, params object[] args);
+		void Fatal(string message, Exception exception, params object[] args);
+	}
 }

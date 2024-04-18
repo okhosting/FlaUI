@@ -2,8 +2,8 @@
 
 namespace FlaUI.Core.Patterns
 {
-    public interface IVirtualizedItemPattern : IPattern
-    {
-        void Realize();
-    }
+	public interface IVirtualizedItemPattern : IPattern
+	{
+		void Realize();
+	}
 }

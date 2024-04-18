@@ -3,8 +3,8 @@ using FlaUI.Core.Patterns.Infrastructure;
 
 namespace FlaUI.Core.Patterns
 {
-    public interface ISpreadsheetPattern : IPattern
-    {
-        AutomationElement GetItemByName(string name);
-    }
+	public interface ISpreadsheetPattern : IPattern
+	{
+		AutomationElement GetItemByName(string name);
+	}
 }

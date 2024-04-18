@@ -1,74 +1,74 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup Label="Build">
-    <TargetFrameworks>net48;netstandard2.0;netcoreapp3.1;net5.0-windows;net6.0-windows</TargetFrameworks>
-    <UseWindowsForms>true</UseWindowsForms>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<TargetFrameworks>net48;netstandard2.0;netcoreapp3.1;net5.0-windows;net6.0-windows</TargetFrameworks>
+	<UseWindowsForms>true</UseWindowsForms>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Label="Package">
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageOutputPath>..\..\artifacts</PackageOutputPath>
-    <Version>4.0.0</Version>
-    <Product>FlaUI</Product>
-    <Authors>Roemer</Authors>
-    <Description>Library with base elements used in the concrete implementations of FlaUI.</Description>
-    <Copyright>Copyright (c) 2016-2022</Copyright>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <PackageProjectUrl>https://github.com/FlaUI/FlaUI</PackageProjectUrl>
-    <PackageIcon>FlaUI.png</PackageIcon>
-    <RepositoryUrl>https://github.com/FlaUI/FlaUI</RepositoryUrl>
-    <PackageTags>UI Automation UIA2 UIA3 UIA System.Windows.Automation</PackageTags>
-    <IncludeSource>True</IncludeSource>
-    <IncludeSymbols>True</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<PackageOutputPath>..\..\artifacts</PackageOutputPath>
+	<Version>4.0.0</Version>
+	<Product>FlaUI</Product>
+	<Authors>Roemer</Authors>
+	<Description>Library with base elements used in the concrete implementations of FlaUI.</Description>
+	<Copyright>Copyright (c) 2016-2022</Copyright>
+	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+	<PackageProjectUrl>https://github.com/FlaUI/FlaUI</PackageProjectUrl>
+	<PackageIcon>FlaUI.png</PackageIcon>
+	<RepositoryUrl>https://github.com/FlaUI/FlaUI</RepositoryUrl>
+	<PackageTags>UI Automation UIA2 UIA3 UIA System.Windows.Automation</PackageTags>
+	<IncludeSource>True</IncludeSource>
+	<IncludeSymbols>True</IncludeSymbols>
+	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <PropertyGroup Label="Signing" Condition="'$(EnableSigning)'=='true'">
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>../../FlaUI.snk</AssemblyOriginatorKeyFile>
-    <PublicSign Condition="'$(OS)'!='Windows_NT'">true</PublicSign>
-    <PackageId>FlaUI.Core.Signed</PackageId>
-    <OutputPath>bin\$(Configuration)\Signed</OutputPath>
-    <IntermediateOutputPath>obj\$(Configuration)\Signed</IntermediateOutputPath>
+	<SignAssembly>true</SignAssembly>
+	<AssemblyOriginatorKeyFile>../../FlaUI.snk</AssemblyOriginatorKeyFile>
+	<PublicSign Condition="'$(OS)'!='Windows_NT'">true</PublicSign>
+	<PackageId>FlaUI.Core.Signed</PackageId>
+	<OutputPath>bin\$(Configuration)\Signed</OutputPath>
+	<IntermediateOutputPath>obj\$(Configuration)\Signed</IntermediateOutputPath>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' != 'net48'">
-    <PackageReference Include="System.Diagnostics.PerformanceCounter">
-      <Version>5.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="System.Drawing.Common">
-      <Version>5.0.2</Version>
-    </PackageReference>
-    <PackageReference Include="System.Management">
-      <Version>5.0.0</Version>
-    </PackageReference>
-    <PackageReference Include="System.Security.Permissions">
-      <Version>5.0.0</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Win32.Registry">
-      <Version>5.0.0</Version>
-    </PackageReference>
+	<PackageReference Include="System.Diagnostics.PerformanceCounter">
+	  <Version>5.0.1</Version>
+	</PackageReference>
+	<PackageReference Include="System.Drawing.Common">
+	  <Version>5.0.2</Version>
+	</PackageReference>
+	<PackageReference Include="System.Management">
+	  <Version>5.0.0</Version>
+	</PackageReference>
+	<PackageReference Include="System.Security.Permissions">
+	  <Version>5.0.0</Version>
+	</PackageReference>
+	<PackageReference Include="Microsoft.Win32.Registry">
+	  <Version>5.0.0</Version>
+	</PackageReference>
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
-    <Reference Include="PresentationFramework" />
-    <Reference Include="PresentationCore" />
-    <Reference Include="WindowsBase" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Management" />
-    <Reference Include="Accessibility" />
-    <Reference Include="System.IO.Compression" />
-    <PackageReference Include="System.Management">
-      <Version>5.0.0</Version>
-    </PackageReference>
+	<Reference Include="PresentationFramework" />
+	<Reference Include="PresentationCore" />
+	<Reference Include="WindowsBase" />
+	<Reference Include="System.Windows.Forms" />
+	<Reference Include="System.Net.Http" />
+	<Reference Include="System.Management" />
+	<Reference Include="Accessibility" />
+	<Reference Include="System.IO.Compression" />
+	<PackageReference Include="System.Management">
+	  <Version>5.0.0</Version>
+	</PackageReference>
   </ItemGroup>
 
   <ItemGroup Label="Additional nuget files">
-    <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="" />
-    <None Include="..\..\CHANGELOG.md" Pack="true" PackagePath="" />
-    <None Include="..\..\FlaUI.png" Pack="true" PackagePath="" />
+	<None Include="..\..\LICENSE.txt" Pack="true" PackagePath="" />
+	<None Include="..\..\CHANGELOG.md" Pack="true" PackagePath="" />
+	<None Include="..\..\FlaUI.png" Pack="true" PackagePath="" />
   </ItemGroup>
 
 </Project>
